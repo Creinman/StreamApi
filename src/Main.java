@@ -15,9 +15,12 @@ public class Main {
         }
 
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) > list.get(i+1)) {
-                int x = list.get(i);
-                list.set(i, list.get(i+1));
+            int e = list.get(i);
+            int j = list.get(i+1);
+            if (list.hasNext()==true)
+            if (e > j) {
+                int x = e;
+                list.set(i, j);
                 list.set(i+1, x);
             }
         }
